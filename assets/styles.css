@@ -648,7 +648,13 @@ input[type="range"]::-moz-range-thumb {
 .plan li svg { flex: none; margin-top: 4px; color: var(--violet-bright); }
 .plan .btn { margin-top: auto; }
 
-.plan-note { margin-top: 20px; color: var(--muted); font-size: 13.5px; max-width: 60ch; }
+.plan-note {
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.65;
+  max-width: 74ch;
+}
 .plan-note a { color: var(--ink-dim); }
 
 /* ---------- status ---------- */
