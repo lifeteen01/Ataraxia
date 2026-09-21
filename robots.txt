@@ -1,0 +1,8 @@
+# Ataraxia
+# Replace ataraxia.example with the live domain before deploying.
+
+User-agent: *
+Allow: /
+Disallow: /assets/app.js
+
+Sitemap: https://ataraxia.example/sitemap.xml
