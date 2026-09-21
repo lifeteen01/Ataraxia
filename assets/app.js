@@ -124,28 +124,6 @@
     });
   });
 
-  /* ---- tap a card to show its prices ---- */
-  Array.prototype.forEach.call(document.querySelectorAll(".card"), function (card) {
-    var toggle = card.querySelector(".card-toggle");
-    var drawer = card.querySelector(".card-drawer");
-    if (!toggle || !drawer) return;
-
-    var setOpen = function (open) {
-      card.classList.toggle("open", open);
-      toggle.setAttribute("aria-expanded", String(open));
-      drawer.hidden = !open;
-    };
-
-    toggle.addEventListener("click", function () {
-      setOpen(drawer.hidden);
-    });
-
-    card.addEventListener("click", function (e) {
-      if (e.target.closest("a, button, details, input")) return;
-      setOpen(drawer.hidden);
-    });
-  });
-
   /* ---- licence length picker on each card ---- */
   Array.prototype.forEach.call(document.querySelectorAll(".card"), function (card) {
     var picks = Array.prototype.slice.call(card.querySelectorAll(".variant"));
