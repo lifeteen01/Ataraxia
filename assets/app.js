@@ -124,10 +124,18 @@
     });
   });
 
-  /* ---- licence length picker on each card ---- */
-  Array.prototype.forEach.call(document.querySelectorAll(".card"), function (card) {
-    var picks = Array.prototype.slice.call(card.querySelectorAll(".variant"));
-    var buy = card.querySelector(".buy");
+  /* ---- open a card's page ---- */
+  Array.prototype.forEach.call(document.querySelectorAll(".card[data-href]"), function (card) {
+    card.addEventListener("click", function (e) {
+      if (e.target.closest("a, button, input, summary")) return;
+      window.location.href = card.dataset.href;
+    });
+  });
+
+  /* ---- licence length picker ---- */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-game]"), function (scope) {
+    var picks = Array.prototype.slice.call(scope.querySelectorAll(".variant"));
+    var buy = scope.querySelector(".buy");
     if (!picks.length || !buy) return;
 
     picks.forEach(function (pick) {
@@ -148,12 +156,12 @@
     var coLength = document.getElementById("coLength");
     var coTotal = document.getElementById("coTotal");
 
-    Array.prototype.forEach.call(document.querySelectorAll(".card .buy"), function (buy) {
+    Array.prototype.forEach.call(document.querySelectorAll(".buy"), function (buy) {
       buy.addEventListener("click", function (e) {
         e.preventDefault();
-        var card = buy.closest(".card");
-        var pick = card.querySelector('.variant[aria-pressed="true"]');
-        coGame.textContent = card.querySelector("h3").textContent;
+        var scope = buy.closest("[data-game]");
+        var pick = scope.querySelector('.variant[aria-pressed="true"]');
+        coGame.textContent = scope.dataset.game;
         coLength.textContent = pick ? pick.dataset.label : "";
         coTotal.textContent = pick ? pick.dataset.price : "";
         modal.showModal();

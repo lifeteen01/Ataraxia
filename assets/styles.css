@@ -597,6 +597,18 @@ input[type="range"]::-moz-range-thumb {
 .card-more[open] summary::after { transform: rotate(225deg) translate(-1px, -1px); }
 .card-more summary:hover { color: var(--ink); }
 
+.spec { margin: 0; }
+.spec div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line-soft);
+  font-size: 13.5px;
+}
+.spec dt { color: var(--muted); }
+.spec dd { margin: 0 0 0 auto; color: var(--ink-dim); text-align: right; }
+
 .module-list { margin: 6px 0 0; }
 .module-list div { padding: 10px 0; border-top: 1px solid var(--line-soft); }
 .module-list dt { font-size: 13.5px; font-weight: 500; }
@@ -962,3 +974,83 @@ input[type="range"]::-moz-range-thumb {
 @media (prefers-reduced-motion: reduce) {
   .modal[open] { animation: none; }
 }
+
+/* ---------- product page ---------- */
+
+.crumb-link { color: var(--muted); text-decoration: none; }
+.crumb-link:hover { color: var(--ink); }
+.crumb-sep { color: var(--faint); }
+
+.phero { padding: 30px 0 10px; }
+
+.phero-art {
+  position: relative;
+  aspect-ratio: 16 / 4;
+  min-height: 150px;
+  background: var(--well);
+  color: var(--tint, var(--violet-bright));
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.phero-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.phero-art .chip {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(20, 17, 25, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.phero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 44px;
+  margin-top: 30px;
+  align-items: start;
+}
+.phero-main h1 { font-size: clamp(32px, 4.4vw, 46px); font-weight: 500; letter-spacing: -0.035em; }
+.phero-main .lede { margin-top: 18px; color: var(--ink-dim); font-size: 17px; max-width: 54ch; }
+.phero-main .tags { margin-top: 22px; min-height: 0; }
+
+.phero-modules { margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--line-soft); }
+.phero-modules h2 { font-size: 22px; }
+.phero-note { color: var(--muted); font-size: 14.5px; margin-top: 10px; max-width: 58ch; }
+.phero-modules .feature-grid { grid-template-columns: 1fr; margin-top: 12px; }
+
+.buybox {
+  position: sticky;
+  top: 92px;
+  background: var(--chrome);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 20px;
+}
+.buybox-head { font-size: 13px; color: var(--faint); letter-spacing: 0.04em; }
+.buybox .variants { margin: 12px 0 14px; }
+.buybox .spec { margin-top: 18px; }
+.buybox-note { margin-top: 14px; color: var(--faint); font-size: 12.5px; line-height: 1.5; }
+
+.card-more-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+.card-more-link:hover { color: var(--ink); }
+
+.card h3 a { text-decoration: none; }
+.card h3 a:hover { color: var(--violet-bright); }
+.card[data-href] { cursor: pointer; }
+.card[data-href]:hover { border-color: rgba(142, 123, 224, 0.4); }
+
+@media (max-width: 1240px) {
+  .phero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .phero-modules { margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--line-soft); }
+.phero-modules h2 { font-size: 22px; }
+.phero-note { color: var(--muted); font-size: 14.5px; margin-top: 10px; max-width: 58ch; }
+.phero-modules .feature-grid { grid-template-columns: 1fr; margin-top: 12px; }
+
+.buybox { position: static; max-width: 460px; }
+}
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rust Lite | Ataraxia</title>
+<meta name="description" content="Everything you need to see the server, with no aim assistance at all. Prices, modules and current status for the Ataraxia Rust Lite client.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://lifeteen01.github.io/Ataraxia/rust-lite.html">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="i-home"><path d="M3 9.2 12 3l9 6.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></g>
+    <g id="i-tag"><path d="M4 4h7l9 9-7 7-9-9z"/><circle cx="8.5" cy="8.5" r="1.2"/></g>
+    <g id="i-activity"><path d="M3 12h4l3 7 4-14 3 7h4"/></g>
+    <g id="i-help"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.6.2-.7.8-.7 1.4"/><path d="M12 17.2v.2"/></g>
+    <g id="i-file"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></g>
+    <g id="i-aim"><circle cx="12" cy="12" r="6.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="1.6"/></g>
+    <g id="i-eye"><path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.6"/></g>
+    <g id="i-globe"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 3.8 5.7 3.8 9S14.6 18.4 12 21c-2.6-2.6-3.8-5.7-3.8-9S9.4 5.6 12 3z"/></g>
+    <g id="i-users"><circle cx="9" cy="9" r="3.2"/><path d="M3 20c.6-3.4 3-5.2 6-5.2S14.4 16.6 15 20"/><path d="M16 6.6A3 3 0 0 1 16 12"/><path d="M18 14.5c2 .8 3 2.6 3.2 5.5"/></g>
+    <g id="i-radar"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></g>
+    <g id="i-folder"><path d="M3 7a1 1 0 0 1 1-1h5l2 2h8a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></g>
+    <g id="i-box"><path d="M3 8.5 12 4l9 4.5v7L12 20l-9-4.5z"/><path d="M3 8.5 12 13l9-4.5M12 13v7"/></g>
+    <g id="i-keys"><rect x="2.5" y="6" width="19" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7.5 14h9"/></g>
+    <g id="i-message"><path d="M4 5h16v11H9l-5 4z"/></g>
+  </defs>
+</svg>
+
+<div class="shell">
+
+  <aside class="rail">
+    <a class="mark" href="index.html" aria-label="Ataraxia home">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M2.5 21 12 3l9.5 18"/><path d="M7 14.5h10"/>
+      </svg>
+      <span class="wordmark">ataraxia<sup>&bull;</sup></span>
+    </a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="railnav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="rail-nav" id="railnav">
+
+    <p class="rail-group">THE COMPANY</p>
+    <a class="rail-link" href="index.html#overview"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-home"/></svg>Overview<span class="dot"></span></a>
+    <a class="rail-link" href="index.html#store"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-box"/></svg>The store<span class="dot"></span></a>
+    <a class="rail-link" href="index.html#status"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-activity"/></svg>Status<span class="dot"></span></a>
+    <a class="rail-link" href="index.html#questions"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-help"/></svg>Questions<span class="dot"></span></a>
+
+    <p class="rail-group" style="margin-top:22px">ACCOUNT</p>
+    <a class="rail-link" href="index.html#store"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-keys"/></svg>Buy a key<span class="dot"></span></a>
+    <a class="rail-link" href="tos.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-file"/></svg>Terms<span class="dot"></span></a>
+
+    <div class="rail-foot">
+      <a class="rail-link" href="index.html#community"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-message"/></svg>Community<span class="dot"></span></a>
+    </div>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <div class="topbar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-box"/></svg>
+      <a class="crumb-link" href="index.html#store">The store</a>
+      <span class="crumb-sep">/</span>
+      <span class="crumb">Rust Lite</span>
+      <span class="spacer"></span>
+      <span class="chip ok"><i></i>Running</span>
+    </div>
+
+    <div class="wrap">
+
+      <section class="phero">
+        <div class="phero-art" style="--tint:#c9884b">
+          <svg viewBox="0 0 400 120" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+            <defs><radialGradient id="glow-rustlite" cx="18%" cy="100%" r="90%"><stop offset="0%" stop-color="currentColor" stop-opacity="0.34"/><stop offset="100%" stop-color="currentColor" stop-opacity="0"/></radialGradient></defs>
+            <rect width="400" height="120" fill="url(#glow-rustlite)"/>
+            <g fill="none" stroke="currentColor" stroke-opacity="0.45">
+              <circle cx="60" cy="150" r="95"/><circle cx="60" cy="150" r="150"/><circle cx="60" cy="150" r="205"/><circle cx="60" cy="150" r="260"/>
+            </g>
+            <g fill="currentColor"><circle cx="196" cy="40" r="4"/><circle cx="286" cy="86" r="4"/><circle cx="132" cy="92" r="4"/></g>
+          </svg>
+          <span class="chip ok"><i></i>Running</span>
+        </div>
+
+        <div class="phero-grid">
+          <div class="phero-main">
+            <h1>Rust Lite</h1>
+            <p class="lede">The information half of the Rust client. You see players, loot and events; your aim stays yours. Cheaper, and the module you are most likely to keep switched on anyway.</p>
+            <ul class="tags"><li>Players</li><li>World</li><li>Events</li><li>Radar</li><li>Profiles</li></ul>
+
+            <div class="phero-modules">
+              <h2>What is in it</h2>
+              <p class="phero-note">Every module is optional and starts switched off. Nothing is preconfigured, because a default that stands out is worse than no feature at all.</p>
+              <div class="feature-grid">
+          <article class="feature">
+            <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-users"/></svg></span>
+            <div><h3>Players</h3><p>Boxes, skeletons, health, held weapon and distance. Teammates, sleepers, scientists and animals each get their own filter and colour, so a sleeping player never reads the same as a live one.</p></div>
+          </article>
+          <article class="feature">
+            <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-globe"/></svg></span>
+            <div><h3>World</h3><p>Ore nodes, hemp, barrels, dropped items, stashes and traps. Every category has its own distance cutoff, so the screen holds what is worth walking to and nothing else.</p></div>
+          </article>
+          <article class="feature">
+            <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-box"/></svg></span>
+            <div><h3>Events</h3><p>Airdrop, patrol helicopter, Bradley and cargo, each with a timer. You know what is inbound before you hear it, and where it lands before the parachute opens.</p></div>
+          </article>
+          <article class="feature">
+            <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-radar"/></svg></span>
+            <div><h3>Radar</h3><p>The local overlay from the front page: detection range, heading that follows you, corner placement and a size you set once. Teammates and players are drawn separately.</p></div>
+          </article>
+          <article class="feature">
+            <span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-folder"/></svg></span>
+            <div><h3>Profiles</h3><p>Save a full set of settings per situation, switch mid-wipe with a shortcut you choose, and export the file if you want to hand it to a friend.</p></div>
+          </article>
+              </div>
+            </div>
+          </div>
+
+          <aside class="buybox" data-game="Rust Lite">
+            <p class="buybox-head">Pick a length</p>
+            <div class="variants" role="group" aria-label="Choose a licence length for Rust Lite">
+            <button class="variant" data-price="$5" data-label="24 hours" aria-pressed="false"><span class="v-name">24 hours</span><span class="v-price tnum">$5</span><span class="v-per tnum">$5.00 a day</span></button>
+            <button class="variant" data-price="$14" data-label="7 days" aria-pressed="true"><span class="v-name">7 days</span><span class="v-price tnum">$14</span><span class="v-per tnum">$2.00 a day</span></button>
+            <button class="variant" data-price="$32" data-label="30 days" aria-pressed="false"><span class="v-name">30 days</span><span class="v-price tnum">$32</span><span class="v-per tnum">$1.07 a day</span></button>
+            </div>
+            <a class="btn btn-primary btn-block buy" href="#buy">Buy 7 days, $14</a>
+            <dl class="spec">
+              <div><dt>Status</dt><dd><span class="chip ok"><i></i>Running</span></dd></div>
+              <div><dt>Game</dt><dd>Rust</dd></div>
+              <div><dt>Anti-cheat</dt><dd>EAC</dd></div>
+              <div><dt>Build</dt><dd class="tnum">2.14.3</dd></div>
+              <div><dt>Updated</dt><dd class="tnum">20 Sep, 11:40 UTC</dd></div>
+              <div><dt>Platform</dt><dd>Windows 10 / 11</dd></div>
+            </dl>
+            <p class="buybox-note">One key, one machine. It counts down from first launch, not from purchase.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="risk">
+        <div class="note warn">
+          <h3>Before you buy</h3>
+          <p>Rust runs kernel-level anti-cheat, and cheating in it can get your account banned without warning. We will not tell you this client is undetectable, because no company selling this can know that. We publish what we currently see on the <a href="index.html#status">status board</a>, we stop selling when we see trouble, and we expect you to use an account you can afford to lose.</p>
+          <p>Keys are refundable within 24 hours while still unactivated. The <a href="tos.html">terms</a> spell out the rest, including what happens when a build goes down.</p>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <span class="grow">&copy; 2026 Ataraxia. Not affiliated with, endorsed by or connected to Facepunch Studios, Epic Games or any other publisher. Game names identify what our clients are built for, nothing more.</span>
+        <a href="tos.html">Terms of service</a>
+        <a href="tos.html#refunds">Refunds</a>
+        <a href="#status">Status</a>
+        <a href="mailto:support@ataraxia.example">support@ataraxia.example</a>
+      </footer>
+
+    </div>
+  </main>
+</div>
+
+<dialog class="modal" id="checkout" aria-label="Checkout">
+  <div class="modal-card">
+    <div class="panel-bar">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><use href="#i-keys"/></svg>
+      <span>Checkout</span>
+      <span class="lights"><i></i><i></i><i></i></span>
+    </div>
+
+    <div class="modal-body">
+      <dl class="summary">
+        <div><dt>Game</dt><dd id="coGame">Rust</dd></div>
+        <div><dt>Length</dt><dd id="coLength">7 days</dd></div>
+        <div><dt>Total</dt><dd id="coTotal" class="tnum">$25</dd></div>
+      </dl>
+
+      <p class="modal-note">this is just an example site bro chill out aint no stripe here</p>
+
+      <button class="btn btn-primary btn-block" id="coClose" type="button">Fair enough</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
