@@ -598,6 +598,16 @@ input[type="range"]::-moz-range-thumb {
 .module-list dt { font-size: 13.5px; font-weight: 500; }
 .module-list dd { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
 
+.store-split {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 12px 0 2px;
+}
+.store-split span { color: var(--faint); font-size: 12.5px; letter-spacing: 0.04em; }
+.store-split::after { content: ""; flex: 1; height: 1px; background: var(--line-soft); }
+
 .card.soon { align-self: start; }
 .card.soon .card-art { filter: saturate(0.45); opacity: 0.75; }
 .card-state { color: var(--faint); font-size: 13px; margin-top: 14px; }
