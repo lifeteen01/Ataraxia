@@ -653,7 +653,6 @@ input[type="range"]::-moz-range-thumb {
   color: var(--muted);
   font-size: 13.5px;
   line-height: 1.65;
-  max-width: 74ch;
 }
 .plan-note a { color: var(--ink-dim); }
 
