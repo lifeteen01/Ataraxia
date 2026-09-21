@@ -1,9 +1,7 @@
-# Ataraxia
-# Crawlers only read robots.txt from a domain root, so on GitHub Pages this
-# file applies once the site has its own domain. Until then, submit the
-# sitemap directly in Google Search Console.
+# Ataraxia - demo site, not for indexing.
+# Every page also carries <meta name="robots" content="noindex, nofollow">,
+# which is what actually blocks it, since GitHub Pages only reads robots.txt
+# from the domain root.
 
 User-agent: *
-Allow: /
-
-Sitemap: https://lifeteen01.github.io/Ataraxia/sitemap.xml
+Disallow: /
