@@ -1,8 +1,9 @@
 # Ataraxia
-# Update these URLs if the site moves to its own domain.
+# Crawlers only read robots.txt from a domain root, so on GitHub Pages this
+# file applies once the site has its own domain. Until then, submit the
+# sitemap directly in Google Search Console.
 
 User-agent: *
 Allow: /
-Disallow: /assets/app.js
 
 Sitemap: https://lifeteen01.github.io/Ataraxia/sitemap.xml
