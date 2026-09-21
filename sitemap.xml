@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace ataraxia.example with the live domain, and lastmod with the date each page last changed. -->
+<!-- Update lastmod when a page changes. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ataraxia.example/</loc>
+    <loc>https://lifeteen01.github.io/Ataraxia/</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ataraxia.example/tos.html</loc>
+    <loc>https://lifeteen01.github.io/Ataraxia/tos.html</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
